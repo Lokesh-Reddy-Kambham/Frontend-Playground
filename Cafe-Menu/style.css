@@ -43,9 +43,13 @@ main img{
     margin-right: auto;
 }
 /* Menu Items */
+ul{
+    padding-left: 0; /* Removed Default Browsing padding of list container */
+}
 li{
     list-style: none;
     margin: 15px 0;
+    padding: 0;
 }
 
 li .flavor ,li .dessert{
