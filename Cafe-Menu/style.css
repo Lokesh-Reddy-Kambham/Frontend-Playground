@@ -43,22 +43,18 @@ main img{
     margin-right: auto;
 }
 /* Menu Items */
-ul{
-    padding-left: 0; /* Removed Default Browsing padding of list container */
-}
-li{
-    list-style: none;
+div{
     margin: 15px 0;
     padding: 0;
 }
 
-li .flavor ,li .dessert{
+.menu-item .flavor ,.menu-item .dessert{
     text-align: left;
     display: inline-block;
     width: 75%;
 }
 
-li .price{
+.menu-item .price{
     text-align: right;
     display: inline-block;
     width: 25%;
