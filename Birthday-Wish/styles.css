@@ -1,0 +1,47 @@
+body{
+    background: linear-gradient(135deg, #2926DE, #2BD692 40%, #E68E1C);
+    text-align: center;
+    font-family: 'Happy Monkey', cursive;
+    color: #ffffff;
+}
+h1,h2,h3{
+    text-shadow: 5px 5px 5px black;
+}
+h1:hover,h2:hover,h3:hover{
+    text-shadow: 5px 5px 5px #00d4ff;
+}
+.wish, .gift-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gift-section h2{
+    margin-bottom:35px;
+}
+.image{
+    width:250px;
+    border:6px solid  deeppink;
+    border-radius: 50%;
+}
+.gift{
+    width: 550px;
+    height:500px;
+    margin-bottom: 30px;
+    border:8px solid whitesmoke;
+    border-radius: 40px ;
+    background-image: url("./gift-cover.jpg");
+    background-size: cover;
+}
+.gift:hover {
+    box-shadow: 0 0 40px #e61c1c;
+    cursor:pointer;
+}
+#gift1:hover{
+    background-image:url("giphy-1.gif") ;
+}
+#gift2:hover{
+    background-image: url("giphy-2.gif");
+}
+#gift3:hover{
+    background-image: url("suck-my-fat-one.gif");
+}
