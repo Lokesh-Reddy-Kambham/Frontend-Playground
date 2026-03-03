@@ -62,6 +62,85 @@
       <a href="https://github.com/lokesh-reddy-kambham" target="_blank">GitHub</a>
     </p>
   </footer>
+<!-- <canvas id="cursorCanvas"></canvas>
 
+<canvas id="cursorCanvas"></canvas>
+
+<script>
+const canvas = document.getElementById("cursorCanvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+canvas.style.position = "fixed";
+canvas.style.top = "0";
+canvas.style.left = "0";
+canvas.style.pointerEvents = "none";
+canvas.style.zIndex = "9999";
+
+let lines = [];
+let mouseX = 0;
+let mouseY = 0;
+let lastX = null;
+let lastY = null;
+
+const trailDuration = 900; // milliseconds
+const smoothFactor = 0.25; // lower = smoother
+
+window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    if (lastX === null || lastY === null) {
+        lastX = mouseX;
+        lastY = mouseY;
+    }
+});
+
+function animate() {
+    const now = Date.now();
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Smooth follow (LERP)
+    lastX += (mouseX - lastX) * smoothFactor;
+    lastY += (mouseY - lastY) * smoothFactor;
+
+    lines.push({
+        x: lastX,
+        y: lastY,
+        time: now
+    });
+
+    // Remove old points
+    lines = lines.filter(point => now - point.time < trailDuration);
+
+    ctx.lineWidth = 2; // your thick brush
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+
+    for (let i = 1; i < lines.length; i++) {
+        const age = now - lines[i].time;
+        const opacity = 1 - age / trailDuration;
+
+        ctx.strokeStyle = `rgba(211,211,211,${opacity})`;
+
+        ctx.beginPath();
+        ctx.moveTo(lines[i - 1].x, lines[i - 1].y);
+        ctx.lineTo(lines[i].x, lines[i].y);
+        ctx.stroke();
+    }
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+</script> -->
 </body>
 </html>

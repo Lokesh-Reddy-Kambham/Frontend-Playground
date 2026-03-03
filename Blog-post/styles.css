@@ -1,28 +1,34 @@
 body{
-  background-color:grey;
+  background-color:powderblue;
+}
+.blogs{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
 }
 .blog-post-card{
   background-color:white;
   border-radius:30px;
-  width:400px;
+  width:300px;
   text-align:center;
-  margin:50px auto;
+  margin:35px auto;
 }
 .post-img{
   width:100%;
   border-bottom:2px solid black;
-  border-radius:20px 20px 0 0;
+  border-radius:30px 30px 0 0;
 }
 .post-content{
-  padding:25px;
+  padding:15px;
 }
 .post-title,.post-excerpt{
-   color:rgb(25, 13, 13);
-   margin:5px; 
+  color:rgb(25, 13, 13);
+  margin:8px; 
 }
 .read-more{
   display:inline-block;
   color:whitesmoke;
+  text-decoration: none;
   background-color:rgb(26, 23, 23);
   padding:10px 20px;
   margin:5px;
